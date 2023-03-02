@@ -1,20 +1,15 @@
 <a name="readme-top"></a>
 
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
 <h3 align="center">Python scripting boilerplate</h3>
   <p align="center">
-    An awasome python template to write production ready and deployable scripts
+    An awasome template to write production ready and deployable python scripts
     <br />
     <br />
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -43,6 +38,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This template was created to jumpstart python scripting projects. The main goal is to ensure deployability and follow general development best practices (like static code analysis, testing, dependancy sceening). This cookiecutter template is build with poetry, so you should use it when developing with this template.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -65,15 +61,20 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-WIP
+Comming soon.
 
 ### Prerequisites
+This template only runs ons Unix-like systems. For Windows users, please use WSL.
 
-WIP
+- pyenv
+- cookiecutter
+- poetry
 
 ### Installation
+Run:
+`cookiecutter gh:jorre99/python-boilerplate`
 
-WIP
+You're done!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,11 +83,18 @@ WIP
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-
+Comming soon.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
+
+- [ ] Update main entry
+- [ ] Update config
+- [ ] Add logging
+- [ ] Add Docker
+- [ ] Add Azure functions
+- [ ] Add Fastapi
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
