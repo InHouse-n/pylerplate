@@ -32,7 +32,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-main = "src.example.main:main"
+main = "src.{{cookiecutter.project_name}}.main:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
@@ -42,7 +42,7 @@ source = ["src"]
 
 [tool.coverage.run]
 branch = true
-source = ["example"]
+source = ["{{cookiecutter.project_name}}"]
 
 [tool.coverage.report]
 fail_under = 100
