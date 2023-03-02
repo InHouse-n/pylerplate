@@ -1,5 +1,3 @@
-from example import __version__ as version
-
 from {{cookiecutter.package_name}} import __version__ as version
 
 
