@@ -32,7 +32,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-main = "src.{{cookiecutter.package_name}}.__main__:main"
+main = "src.{{cookiecutter.package_name}}.__main__"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
