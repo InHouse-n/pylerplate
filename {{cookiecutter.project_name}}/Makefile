@@ -8,7 +8,7 @@ help:  ## Display this help
 .PHONY: help
 
 run: ## Runs main script
-	$(CMD) main
+	$(CMD) python src
 .PHONY: run
 
 
