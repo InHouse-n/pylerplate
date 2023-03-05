@@ -1,5 +1,5 @@
 import os
-
+import myawsc
 import click
 
 
@@ -23,6 +23,7 @@ def main(env: str, debug: bool):
     os.environ["ENV"] = env
     os.environ["DEBUG"] = str(debug)
     print(f"hello world {env}, {debug}")
+
 
 
 if __name__ == "__main__":
