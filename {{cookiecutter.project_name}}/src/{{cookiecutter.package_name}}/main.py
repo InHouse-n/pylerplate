@@ -1,7 +1,7 @@
 import os
 
 from src import logger_provider
-from src.{{cookiecutter.prackage_name}}.person import Person
+from src.{{cookiecutter.package_name}}.person import Person
 from src.config import Config
 
 
