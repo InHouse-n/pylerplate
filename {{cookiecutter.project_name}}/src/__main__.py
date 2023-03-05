@@ -16,8 +16,7 @@ _logger = logger_provider.get_logger(__name__)
     default="local",
 )
 def main(env: str):
-    _logger.info(f"Running main script with env: {env}")
-    script.main(config.get_config(env))
+    script.main()
 
 
 if __name__ == "__main__":
