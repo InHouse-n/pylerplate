@@ -4,7 +4,6 @@ import click
 
 from src import logger_provider
 from src.{{cookiecutter.package_name}} import main as script
-from src import config
 
 _logger = logger_provider.get_logger(__name__)
 
