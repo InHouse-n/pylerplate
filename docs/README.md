@@ -17,9 +17,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -38,35 +35,21 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This template was created to jumpstart python scripting projects. The main goal is to ensure deployability and follow general development best practices (like static code analysis, testing, dependancy sceening). This cookiecutter template is build with poetry, so you should use it when developing with this template.
+This template was created to jumpstart python scripting projects. The main goal is to ensure deployability and follow general development best practices (like static code analysis, testing, dependancy screening).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [![poetry]][poetry]
-* [![safety]][safety]
-* [![flake8]][flake8]
-* [![black]][black]
-* [![click]][click]
-* [![mypy]][mypy]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-Comming soon.
+- Start scripting in src/<project_name>/main.py
+- Logger_provider can be called to get a instance of the configured logger
+- Use the Makefile to run commands on the project, run `make help` for info about the commands
 
 ### Prerequisites
 This template only runs ons Unix-like systems. For Windows users, please use WSL.
-
-- pyenv
+You should have the below installed on your machine
 - cookiecutter
 - poetry
 
@@ -75,59 +58,4 @@ Run:
 `cookiecutter gh:jorre99/python-boilerplate`
 
 You're done!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Comming soon.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Update main entry
-- [ ] Update config
-- [ ] Add logging
-- [ ] Add Docker
-- [ ] Add Azure functions
-- [ ] Add Fastapi
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-
-[poetry]: https://python-poetry.org/
-[safety]: https://pypi.org/project/safety/
-[click]: https://click.palletsprojects.com/en/8.1.x/
-[faker]: https://faker.readthedocs.io/en/master/
-[black]: https://pypi.org/project/black/
-[flake8]: https://flake8.pycqa.org/en/latest/
-[mypy]: https://mypy-lang.org/
 
