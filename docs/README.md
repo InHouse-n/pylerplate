@@ -55,7 +55,7 @@ You should have the below installed on your machine
 
 ### Installation
 Run:
-`cookiecutter gh:jorre99/python-boilerplate`
+`cookiecutter gh:InHouse-n/python-boilerplate`
 
 You're done!
 
