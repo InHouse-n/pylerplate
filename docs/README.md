@@ -43,8 +43,8 @@ This template was created to jumpstart python scripting projects. The main goal 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-- Start scripting in src/<project_name>/main.py
-- Logger_provider can be called to get a instance of the configured logger
+- Start scripting in src/<project_name>/__main__.py
+- logger_provider can be called to get a instance of the configured logger
 - Use the Makefile to run commands on the project, run `make help` for info about the commands
 
 ### Prerequisites
