@@ -8,7 +8,7 @@ help:
 .PHONY: help
 
 run:
-	$(CMD) python {{cookiecutter.package_name}}
+	$(CMD) python src/{{cookiecutter.package_name}}
 .PHONY: run
 
 format:
