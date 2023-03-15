@@ -13,7 +13,7 @@
 
 <!-- GETTING STARTED -->
 ## Getting Started
-- Start scripting in src/<project_name>/__main__.py
+- Start scripting in src/<project_name>/main.py
 - logger_provider can be called to get a instance of the configured logger
 - Use the Makefile to run commands on the project, run `make help` for info about the commands
 
@@ -30,6 +30,8 @@ Run:
 Then, run
 `make help`
 
-Do not run `Poetry run main`
+The best way to run your scrip is by using the provide Makefile
+
 You're done!
+Do not run `Poetry run main`
 
