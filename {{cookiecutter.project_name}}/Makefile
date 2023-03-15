@@ -11,7 +11,6 @@ run: ## Runs main script
 	$(CMD) python src
 .PHONY: run
 
-
 format: ## rewrites code with black and isort
 	$(CMD) black $(SRC_DIR) $(TESTS_DIR)
 	$(CMD) isort $(SRC_DIR) $(TESTS_DIR)
@@ -35,7 +34,7 @@ qa-local: format qa ## for local development (before checking in). Formats code 
 
 
 lint-black: ## checks src and tests with mypy
-	$(CMD) black --check --fast $(SRC_DIR) $(TESTS_DIR)
+	$(CMD) black $(SRC_DIR) $(TESTS_DIR)
 .PHONY: lint-black
 
 lint-flake: ## checks src and tests with mypy

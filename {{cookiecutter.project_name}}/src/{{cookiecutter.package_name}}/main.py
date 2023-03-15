@@ -1,7 +1,6 @@
 import os
 
 from src import logger_provider
-from src.{{cookiecutter.package_name}}.person import Person
 
 
 def main():
