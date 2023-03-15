@@ -26,7 +26,7 @@ You should have the below installed on your machine
 
 ### Installation
 Run:
-`cookiecutter gh:jorre99/python-boilerplate`
+`cookiecutter gh:in-house-n/pylerplate`
 Then, run
 `make help`
 
