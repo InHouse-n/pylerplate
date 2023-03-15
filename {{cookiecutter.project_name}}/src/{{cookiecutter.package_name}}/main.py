@@ -5,11 +5,10 @@ from src.{{cookiecutter.package_name}}.person import Person
 
 
 def main():
-    """Small example of code to get you started"""
+    """Main function, start coding here"""
 
-    karen = Person("Karen", 26, "blue")
-    karen.present_yourself()
-
-    karen.birthday()
-    karen.change_name("Hanne")
-    karen.present_yourself()
+    log = logger_provider.get_logger(__name__)
+    log.debug("This is a Debug log")
+    log.info("This is a information log")
+    log.error("This is a Error log")
+    log.critical("This is a Critical log")
