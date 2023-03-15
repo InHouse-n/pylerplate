@@ -3,44 +3,44 @@ CMD := poetry run
 SRC_DIR := src
 TESTS_DIR := tests
 
-help:  ## Display this help
+help:
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n"} /^[a-zA-Z0-9_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 .PHONY: help
 
-run: ## Runs main script
+run:
 	$(CMD) python src
 .PHONY: run
 
-format: ## rewrites code with black and isort
+format:
 	$(CMD) black $(SRC_DIR) $(TESTS_DIR)
 	$(CMD) isort $(SRC_DIR) $(TESTS_DIR)
 .PHONY: format
 
-lint: lint-black lint-flake lint-mypy ## runs all static analysis tools
+lint: lint-black lint-flake lint-mypy
 .PHONY: lint
 
-test: ## runs tests
+test:
 	$(CMD) pytest --cov=src --cov-report term --cov-report html:tests/.coverage $(TESTS_DIR)
 .PHONY: test
 
-safety: ## tests third part packages against a database of known compromised ones
+safety:
 	poetry export --with dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
-qa: safety lint test ## for CI/CD. Runs all code quality tools
+qa: safety lint test ## for CI/CD.
 .PHONY: qa
 
-qa-local: format qa ## for local development (before checking in). Formats code and runs qa
+qa-local: format qa
 .PHONY: qa-local
 
 
-lint-black: ## checks src and tests with mypy
-	$(CMD) black $(SRC_DIR) $(TESTS_DIR)
+lint-black:
+	$(CMD) black --check --fast $(SRC_DIR) $(TESTS_DIR)
 .PHONY: lint-black
 
-lint-flake: ## checks src and tests with mypy
+lint-flake: 
 	$(CMD) flakeheaven lint $(SRC_DIR) $(TESTS_DIR)
 .PHONY: lint-flake
 
-lint-mypy: ## checks type annotation
+lint-mypy:
 	$(CMD) mypy $(SRC_DIR) $(TESTS_DIR)
 .PHONY: lint-mypy

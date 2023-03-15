@@ -68,7 +68,6 @@ show_source = true
 [tool.flakeheaven.plugins]
 mccabe = ["+*"]
 pycodestyle = ["+*"]
-pyflake = ["+*"]
 flake8-bandit = ["+*", "-S322"]
 flake8-bugbear = ["+*"]
 flake8-simplify = ["+*"]

@@ -4,21 +4,23 @@ import colorlog
 
 from logging.handlers import TimedRotatingFileHandler
 
-FILE_FORMATTER = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s — %(message)s")
+FILE_FORMATTER = logging.Formatter(
+    "%(asctime)s — %(name)s — %(levelname)s — %(message)s"
+)
 
 CONSOLE_FORMATTER = colorlog.ColoredFormatter(
-	"%(asctime)s — %(log_color)s%(levelname)-8s%(reset)s %(blue)s%(message)s",
-	datefmt=None,
-	reset=True,
-	log_colors={
-		'DEBUG':    'cyan',
-		'INFO':     'green',
-		'WARNING':  'yellow',
-		'ERROR':    'red',
-		'CRITICAL': 'red,bg_white',
-	},
-	secondary_log_colors={},
-	style='%'
+    "%(asctime)s — %(log_color)s%(levelname)-8s%(reset)s %(blue)s%(message)s",
+    datefmt=None,
+    reset=True,
+    log_colors={
+        "DEBUG": "cyan",
+        "INFO": "green",
+        "WARNING": "yellow",
+        "ERROR": "red",
+        "CRITICAL": "red,bg_white",
+    },
+    secondary_log_colors={},
+    style="%",
 )
 
 LOG_FILE = "./logs/my_app.log"
@@ -38,7 +40,7 @@ def get_file_handler():
 
 def get_logger(logger_name):
     logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG) # TODO: make a flag for log level
+    logger.setLevel(logging.DEBUG)  # TODO: make a flag for log level
     logger.addHandler(get_console_handler())
     logger.addHandler(get_file_handler())
     logger.propagate = False
