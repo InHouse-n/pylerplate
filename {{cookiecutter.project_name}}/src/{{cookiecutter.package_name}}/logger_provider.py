@@ -1,8 +1,8 @@
 import logging
 import sys
-import colorlog
-
 from logging.handlers import TimedRotatingFileHandler
+
+import colorlog
 
 FILE_FORMATTER = logging.Formatter(
     "%(asctime)s — %(name)s — %(levelname)s — %(message)s"
@@ -24,6 +24,7 @@ CONSOLE_FORMATTER = colorlog.ColoredFormatter(
 )
 
 LOG_FILE = "./logs/my_app.log"
+LOG_LEVEL = logging.DEBUG
 
 
 def get_console_handler():
@@ -38,9 +39,16 @@ def get_file_handler():
     return file_handler
 
 
-def get_logger(logger_name):
+def set_logger_level(log_level: str):
+    if log_level == "dev":
+        LOG_LEVEL = logging.DEBUG
+    if log_level == "prd":
+        LOG_LEVEL = logging.INFO
+
+
+def get_logger(logger_name: str):
     logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG)  # TODO: make a flag for log level
+    logger.setLevel(LOG_LEVEL)  # TODO: make a flag for log level
     logger.addHandler(get_console_handler())
     logger.addHandler(get_file_handler())
     logger.propagate = False
