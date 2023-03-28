@@ -40,7 +40,7 @@ def get_file_handler():
 
 def get_logger(logger_name: str):
     logger = logging.getLogger(logger_name)
-    logger.setLevel(logger.DEBUG)  # TODO: make a flag for log level
+    logger.setLevel(logging.DEBUG)  # TODO: make a flag for log level
     logger.addHandler(get_console_handler())
     logger.addHandler(get_file_handler())
     logger.propagate = False
