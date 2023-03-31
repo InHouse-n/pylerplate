@@ -1,4 +1,4 @@
-from src import __version__ as version
+from src.{{cookiecutter.project_name}} import __version__ as version
 
 
 def test_version(fake):
