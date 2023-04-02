@@ -8,7 +8,7 @@ help:
 .PHONY: help
 
 run: ## Run as package
-	$(CMD) python src/{{cookiecutter.package_name}}
+	$(CMD) python $(SRC_DIR)/{{cookiecutter.package_name}}
 .PHONY: run
 
 format: ## Format with Black & Isort
@@ -42,5 +42,5 @@ lint-flake:
 .PHONY: lint-flake
 
 lint-mypy:
-	$(CMD) mypy $(SRC_DIR) $(TESTS_DIR)
+	$(CMD) mypy $(SRC_DIR)/{{cookiecutter.package_name}}
 .PHONY: lint-mypy
