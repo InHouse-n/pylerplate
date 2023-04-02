@@ -16,8 +16,7 @@ format: ## Format with Black & Isort
 	$(CMD) isort $(SRC_DIR) $(TESTS_DIR)
 .PHONY: format
 
-lint: ## Lint with Black, Flake 
-	lint-black lint-flake lint-mypy
+lint: lint-black lint-flake lint-mypy ## Lint with Black, Flake 
 .PHONY: lint
 
 test: ## Unit test with Pytest
